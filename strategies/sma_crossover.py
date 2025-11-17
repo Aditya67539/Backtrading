@@ -1,5 +1,4 @@
 from indicators.sma import sma
-import matplotlib.pyplot as plt
 
 def sma_crossover(series, short_window=50, long_window=200):
     short_sma = sma(series["Price"], short_window)
