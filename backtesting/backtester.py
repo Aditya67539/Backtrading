@@ -1,21 +1,23 @@
+import pandas as pd
+
 class Backtester:
     def __init__(self, series, signals):
         self.series = series
         self.signals = signals
         self.prices = self.series["Price"]
+        self.equity = None
 
     def run(self, initial_balance=100_000):
         balance = initial_balance
         shares = 0
         invested = False
-        total_invested = 0
+        equity_curve = []
 
         for i, signal in enumerate(self.signals):
-            price = self.prices[i]
+            price = self.prices.iloc[i]
             
             if not invested and signal == 1:
                 shares = balance / price
-                total_invested += balance
                 invested = True
                 balance = 0
                 print(f"BUY at price={price}")
@@ -26,9 +28,19 @@ class Backtester:
                 invested = False
                 print(f"SOLD at price={price}")
 
-        final_value = balance if not invested else shares * self.prices[0]
-        pnl = final_value - total_invested
-        print(f"Total invested: {total_invested}")
+            value = balance + shares * price
+            equity_curve.append((self.series["Date"].iloc[i], value))
+        
+        self.equity = pd.Series(
+            [v for _, v in equity_curve],
+            index = [d for d, _ in equity_curve]
+        )
+
+        final_value = balance if not invested else shares * self.prices.iloc[-1]
+        pnl = final_value - initial_balance
+        print(f"Total invested: {initial_balance}")
         print(f"Final Value: {final_value}")
         print(f"PnL: {pnl}")
-        print(f"Percentage: {pnl / total_invested * 100}")
+        print(f"Percentage: {pnl / initial_balance * 100}")
+
+        return self.equity
