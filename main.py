@@ -9,7 +9,7 @@ def main():
     short_window = 50
     long_window = 200
 
-    signal = ema_crossover(df, short_window, long_window)
+    signal = sma_crossover(df, short_window, long_window)
 
     bt = Backtester(df, signal)
     bt.run()
