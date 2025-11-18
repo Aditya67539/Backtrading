@@ -39,7 +39,7 @@ class Backtester:
 
         final_value = balance if not invested else shares * self.prices.iloc[-1]
         pnl = final_value - initial_balance
-        print(f"Total invested: {initial_balance}")
+        print(f"\nTotal invested: {initial_balance}")
         print(f"Final Value: {final_value}")
         print(f"PnL: {pnl}")
         print(f"Percentage: {pnl / initial_balance * 100}")
