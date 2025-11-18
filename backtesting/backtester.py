@@ -1,4 +1,5 @@
 import pandas as pd
+from backtesting.metrics import compute_metrics
 
 class Backtester:
     def __init__(self, series, signals):
@@ -42,5 +43,7 @@ class Backtester:
         print(f"Final Value: {final_value}")
         print(f"PnL: {pnl}")
         print(f"Percentage: {pnl / initial_balance * 100}")
+
+        compute_metrics(self.equity, initial_balance)
 
         return self.equity
