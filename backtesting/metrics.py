@@ -17,7 +17,7 @@ def compute_metrics(equity, initial_balance):
     sharpe_ratio = (mean / std) * np.sqrt(252)
     print(f"Sharpe Ratio: {sharpe_ratio}")
 
-    # # Max Drawdown
-    # rolling_max = equity.cummax()
-    # drawdown = (equity - rolling_max) / rolling_max
-    # print(f"Max Drawdown: {drawdown.min() * 100}%")
+    # Max Drawdown
+    rolling_max = equity.cummax()
+    drawdown = (equity - rolling_max) / rolling_max
+    print(f"Max Drawdown: {drawdown.min() * 100}%")
