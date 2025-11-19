@@ -116,13 +116,11 @@ Equity curves and indicators are visualized using Matplotlib.
 
 ## 📉 Example Output Plots
 
-```markdown
 ### Equity Curve – EMA Crossover
 ![EMA Equity Curve](images/equity_curve_ema.png)
 
 ### Equity Curve – SMA Crossover
 ![SMA Equity Curve](images/equity_curve_sma.png)
-```
 
 ---
 
