@@ -19,7 +19,7 @@ Designed to be simple enough for learning — yet structured like a real-world b
   * **Sharpe Ratio**
   * **Maximum Drawdown**
   * **Volatility**
-  
+
 * Clear equity curve visualization
 * Works with any OHLCV-style CSV
 * Easily extendable to add:
@@ -118,10 +118,10 @@ Equity curves and indicators are visualized using Matplotlib.
 
 ```markdown
 ### Equity Curve – EMA Crossover
-![EMA Equity Curve](images/equity_curve_ema.png)
+![EMA Equity Curve](BACKTEST/images/equity_curve_ema.png)
 
 ### Equity Curve – SMA Crossover
-![SMA Equity Curve](images/equity_curve_sma.png)
+![SMA Equity Curve](BACKTEST/images/equity_curve_sma.png)
 ```
 
 ---
