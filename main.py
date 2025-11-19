@@ -18,6 +18,11 @@ def main():
     fig, ax = plt.subplots()
 
     ax.plot(equity.index, equity.values)
+    ax.grid()
+
+    plt.title("Equity Curve (EMA Crossover)", fontsize=24)
+    plt.xlabel("Days", fontsize=18)
+    plt.ylabel("Price", fontsize=18)
 
     plt.show()
 
