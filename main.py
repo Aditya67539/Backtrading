@@ -21,8 +21,8 @@ def main():
     ax.grid()
 
     plt.title("Equity Curve (EMA Crossover)", fontsize=24)
-    plt.xlabel("Days", fontsize=18)
-    plt.ylabel("Price", fontsize=18)
+    plt.xlabel("Days", fontsize=16)
+    plt.ylabel("Price", fontsize=16)
 
     plt.show()
 
