@@ -121,7 +121,7 @@ Equity curves and indicators are visualized using Matplotlib.
 ![EMA Equity Curve](https://raw.githubusercontent.com/Aditya67539/Backtrading/refs/heads/main/images/equity_curve_ema.png)
 
 ### Equity Curve – SMA Crossover
-![SMA Equity Curve](images/equity_curve_sma.png)
+![SMA Equity Curve](https://raw.githubusercontent.com/Aditya67539/Backtrading/refs/heads/main/images/equity_curve_sma.png)
 ```
 
 ---
